@@ -1,6 +1,5 @@
 def suma2(n1,n2):
     print(f"el resultado de la suma es {n1}+{n2}")
-
 def suma():
     n1=int(input("ingrese un numero"))
     n2=int(input("ingrese otro numero"))
@@ -41,9 +40,7 @@ def calculadora():
                 break
             case _:
                 print("opcion no valida")
-
-
-
+                
 
 
 
