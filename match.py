@@ -16,7 +16,6 @@ def divicion():
     n1=int(input("ingrese un numero"))
     n2=int(input("ingrese otro numero"))
     print(f"el resultado de la suma es, {n1}/{n2}")
-
 def calculadora():
    while True:
      op=int(input("""sleccione una opcion
@@ -30,7 +29,7 @@ def calculadora():
             case 1:
                 suma()
             case 2:
-                resta("el resultado de la suma es, ")
+                resta("el resultado de la suma es" )
             
             case 3:
                 multiplicacion()

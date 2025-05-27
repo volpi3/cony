@@ -44,6 +44,8 @@
 # print("bienbenido a la calculadora ")
 # print("para salir escribe salir")
 # print("la opciones son suma, reta,multi y div ")
+
+
 resultado=""
 def calcu():
     while True:
