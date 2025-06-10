@@ -1,6 +1,6 @@
-#     -5 -4 -3 -2 -1
+#        -5-4 -3  -2 -1
 # lista=[1, 5, 7, 10,16]
-# #      0 1 2 3 4 5
+# #      0  1  2   3  4  
 # print(lista[4]) #acceso a valor por indice  positivo
 # print(lista[-5]) #acceso a valor por indice  positivo
 
@@ -31,21 +31,120 @@
 #     else:
 #         print("ni una a encontada")
 
-notas=[55,67,34,70,13]
-cnot=0
-suma=0
-ifnotas>=40:
-    print("usted tiene buena nota")
-else:
-    print("usted tiene un rojo")
-for num in notas:
-    suma+=num
-    cnot+=1
-prom=suma/cnot
+# notas=[55,67,34,70,13]
+# cnot=0
+# suma=0
+# if notas>=40:
+#     print("usted tiene buena nota")
+# else:
+#     print("usted tiene un rojo")
+# for num in notas:
+#     suma+=num
+#     cnot+=1
+# prom=suma/cnot
 
-print("el promerdio es ",round (prom))
+# print("el promerdio es ",round (prom))
 # if notas>=40:
 #     print("usted tiene buena nota")
 # else:
 #     print("usted tiene un rojo")
 
+# frutas={"manzana","frambueza","durazno"}
+
+# for frutas in frutas:
+#     print(frutas)
+
+# numero=[1, 5, 7, 10,16]
+
+# print(len(numero))
+# print(numero)
+# numero.append(20)#append agrega un numero a la lista 
+# print(numero)#muestra el numero agregado 
+
+# nombre=[]
+# while True:
+#     print('''
+#           1.- Ingrese Nombre
+#           2.- Salir
+#           ''')
+#     op=int(input(" seleccione una opcion "))
+#     match op:
+#         case 1:
+#             nom=input(" ingrese un nombre ")
+#             nombre.append(nom)   
+#             print(nombre)
+#         case 2:
+#             print(" saliendo... ")
+#             break
+#         case _:
+#             print(" opcion invalida ")
+# nombre=["Diego"]
+# apellido=["Robles"]
+# while True:
+#     print('''
+#           1.- Ingrese Nombre y apellido 
+#           2.- buscar nombre
+#           3.- mostrar nombre
+#           4.-salir
+#           ''')
+#     op=int(input(" seleccione una opcion "))
+#     match op:
+#         case 1:
+#             nom=input(" ingrese su nombre ")
+#             ape=input(" ingrese su apellido ")
+#             nombre.append(nom)  
+#             apellido.append(ape) 
+#         case 2:
+#             buscar=input("ingrese el nombre que busca")
+#             if buscar in nombre:
+#                 print(f"el nombre {buscar} se encuentra en la lista")
+#             else:
+#                 print(f"el nombre {buscar } no se encuentra en la lista")
+          
+#         case 3:
+#             for i in range(len(nombre)):
+#                 print( nombre[i], apellido[i])
+        
+#         case 4:
+#             print ("saliendo del programa")
+#             break
+#         case _:
+#             print("opcion invalida")
+
+productos=["mojito", "tequila margarita", "piña colada"]
+precios=["6000","7500","6500"]
+carro=[]
+while True:
+    print('''
+          1.- Ingrese productos
+          2.- comprar
+          3.- crear boleta
+          4.-salir
+          ''')
+    op=int(input(" seleccione una opcion "))
+    match op:
+        case 1:
+              nom=input(" ingrese un producto ")
+              productos.append(nom)
+              pre=int(input("ingrese el precio"))
+              precios.append(pre)   
+        case 2:    
+                for i in range(len(productos)):
+                    print(f"{i+1} .- {productos[i]} $ {precios[i]}")
+        case 3:
+              print()
+              
+        case 4:
+              print("salir del super")
+              break
+        case _:
+              print("opcion invalida")
+
+                       
+                    
+                        
+
+              
+            
+          
+    
