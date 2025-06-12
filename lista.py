@@ -111,34 +111,70 @@
 #         case _:
 #             print("opcion invalida")
 
-productos=["mojito", "tequila margarita", "piña colada"]
-precios=["6000","7500","6500"]
-carro=[]
+# productos=["mojito", "tequila margarita", "piña colada"]
+# precios=["6000","7500","6500"]
+# carro=[]
+# while True:
+#     print('''
+#           1.- Ingrese productos
+#           2.- comprar
+#           3.- crear boleta
+#           4.-salir
+#           ''')
+#     op=int(input(" seleccione una opcion "))
+#     match op:
+#         case 1:
+#               nom=input(" ingrese un producto ")
+#               productos.append(nom)
+#               pre=int(input("ingrese el precio"))
+#               precios.append(pre)   
+#         case 2:    
+#                 for i in range(len(productos)):
+#                     print(f"{i+1} .- {productos[i]} $ {precios[i]}")
+#         case 3:
+#               print()
+              
+#         case 4:
+#               print("salir del super")
+#               break
+#         case _:
+#               print("opcion invalida")
+
+notas=[5.4, 1.0 ,7.0]
 while True:
-    print('''
-          1.- Ingrese productos
-          2.- comprar
-          3.- crear boleta
-          4.-salir
+    print(''' programa de notas 
+          1.-Ingrese sus notas
+          2.-Borrar nota
+          3.-Mostrar notas
+          4.-sacar promedio, nota mayor y nota menor 
+          5.-limpiar todas las notas 
+          6.-salir
           ''')
-    op=int(input(" seleccione una opcion "))
+    op=int(input("selecione una opcion "))
     match op:
         case 1:
-              nom=input(" ingrese un producto ")
-              productos.append(nom)
-              pre=int(input("ingrese el precio"))
-              precios.append(pre)   
-        case 2:    
-                for i in range(len(productos)):
-                    print(f"{i+1} .- {productos[i]} $ {precios[i]}")
+            nota=float(input("ingrese su nota "))
+            notas.append(nota)
+        case 2:
+             for i in range(len(notas)):
+                     print(f"{i+1} .- {notas[i]} ")
+             elim=int(input("ingrese la nota que quiere eliminar"))
+             notas.pop(elim-1)
         case 3:
-              print()
-              
+              print(notas)
         case 4:
-              print("salir del super")
-              break
+              print(f"su promedio es:{sum(notas)/len(notas)}\n su nota mayor es {max(notas)} y su nota menor es {min(notas)}")
+             
+        case 5:
+              notas.clear()
+              print("las notas fueron eliminadas")
+              
+        case 6:
+            print("salir del programa ")
+            break
         case _:
-              print("opcion invalida")
+            print("opcion invalida ")
+        
 
                        
                     
