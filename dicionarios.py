@@ -66,6 +66,65 @@ personas={
         "telefono":6587468,
         "estado civil":"soltero",
         "ciudadano":False}
-}
-
-
+        }
+#########
+personas={{ }}
+while True:
+     try:
+          print('''
+                1.-ingresar persona
+                2.-mostrar listado
+                3.-actualizar persona
+                4.-borrar persona
+                5.- salir
+                ''')
+          op=int(input("ingrese una de las opciones"))
+          match op:
+               case 1:
+                    nom=input("ingrese su nombre")
+                    tel=int(input("ingrese su numero"))
+                    est=int(input("1.-casado, 2.-soltero"))
+                    if est==1:
+                         estcivil="casado"
+                    else:
+                         estcivil="soltero"
+                    est=int(input(" Es usted ciudadano 1.-si 2.-no"))
+                    if est==1:
+                         ciuda=True
+                    else:
+                         ciuda=False
+                    ld=len(personas)+1
+                    personas[ld]={"nombre":nom,
+                                 "telefono":tel,
+                                 "ciudadano":ciuda}
+               case 2:
+                    for n, personas in personas.items():
+                     print(n, personas)
+                    
+               case 3:
+                    for n, personas in personas.items():
+                     print(n, personas)
+                    perso=int(input('''
+                        1.-nombre
+                        2.-numero
+                        3.-estado civil
+                        4.-ciudadano
+                        5.- salir
+                        '''))
+                    dato=int(input("que dato desea actualizar"))
+                    personas[perso][dato]
+                  
+               case 4:
+                    for n, personas in personas.items():
+                        print(n, personas)
+                    elim=int(input("que persona quiere borar"))
+                    personas.pop(elim-1)
+                    del personas[elim]
+                    print(f"la persona {elim} fue eliminada")
+               case 5:
+                    print("saliendo..")
+                    break
+               case _:
+                    print("opcion invalida")
+     except Exception:
+          print("agrege una opcion numerica")
